@@ -2,19 +2,20 @@
 let currentScene = 0
 const scenes = [
     {   //Scene 0 
-        description: "Har du nyckeln till ytterdörren?",
+        description: "Det är måndag morgon, matlådan är packad och klar. Det är dags att åka till jobbet.Har du nycklarna till ytterdörren?",
         choices:["Ja", "Nej"], 
         nextScene: [1, 0] // Ja, vidare till scene 1. Nej, alert - kolla i lådan! 
     }, 
     {   //Scene 1 
-        description: "Toppen! Kan du gå till dörren och öppna?",
+        description: "Låser du dörren?",
         choices: ["Ja", "Nej"], 
         nextScene: [2, 1] // Ja, öppnar dörren. Nej, behöver en alert här! Fråga David! 
     }, 
     {   //Scene 2 
-        description: "Lås dörren och sätt dig i bilen. Kan du starta bilen?",
-        choices: ["Ja", "Nej"], 
-         
+        description: " Toppen, hoppa in i bilen så kör vi! Du inser att det behövs tankas. Vill du åka till St1, Circle K eller Shell",
+        choices: ["St1", "Circle K", "Shell"], 
+        nextScene: [, 2]
+        
     }, 
 ]; 
 
