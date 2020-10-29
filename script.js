@@ -30,13 +30,13 @@ const scenes = [
     }, 
 
     { //Scene 5
-        description: "Skönt att vara hemma. Sätt på tvn och njut!",
+        description: "Skönt att vara hemma. Sätt på tvn och njut!", //De
     
     }, 
     { //Scene 6
         description: "Gott! Dags att jobba några timmar innan det är dags att åka hem igen. Ska det bli skönt att åka hem?",
         choices: ["Ja", "Nej"], 
-        nextScene: [5, 5]  
+        nextScene: [5, 9]  
     },
     { //Scene 7
         description: "Kolla i lådan. Ok?",
@@ -48,6 +48,12 @@ const scenes = [
         description: "Dörren måste vara låst, annars kan någon gå in. Ok?",
         choices: ['Ok'],
         nextScene: [1] 
+    
+    }, 
+    { //Scene 9
+        description: "Du måste åka hem nångång. Ok?",
+        choices: ['Ok'],
+        nextScene: [5] 
     
     }, 
 ]; 
@@ -73,10 +79,6 @@ function handleUserChoice(answer) {
         alert('Slut')
         return;
     }
-    
-   //if (!scene.choices) {
-      //  alert('Kolla i lådan')
-    //}
 
     if(answer === scene.choices[0]) { 
         currentScene = scene.nextScene [0]  
