@@ -30,8 +30,9 @@ const scenes = [
     }, 
 
     { //Scene 5
-        description: "Skönt att vara hemma. Sätt på tvn och njut!", //De
-    
+        description: "Skönt att vara hemma. Sätt på tvn och njut!",
+        choices: [],
+        nextScene: []
     }, 
     { //Scene 6
         description: "Gott! Dags att jobba några timmar innan det är dags att åka hem igen. Ska det bli skönt att åka hem?",
@@ -40,19 +41,19 @@ const scenes = [
     },
     { //Scene 7
         description: "Kolla i lådan. Ok?",
-        choices: ['Ok'],
+        choices: [],
         nextScene: [1] 
     
     }, 
     { //Scene 8
         description: "Dörren måste vara låst, annars kan någon gå in. Ok?",
-        choices: ['Ok'],
+        choices: [],
         nextScene: [1] 
     
     }, 
     { //Scene 9
         description: "Du måste åka hem nångång. Ok?",
-        choices: ['Ok'],
+        choices: [],
         nextScene: [5] 
     
     }, 
@@ -62,23 +63,27 @@ const scenes = [
 window.onload = presentScene; 
 
 //Define the actions for our application 
-
 function presentScene() {
     const scene = scenes[currentScene];
 
-    const answer = prompt(scene.description) 
-    handleUserChoice(answer)
+    
+    if (scene.nextScene.length === 1) {
+        alert(scene.description)
+        currentScene = scene.nextScene[0]
+        presentScene()
+    } else if (scene.nextScene.length > 1) {
+        const answer = prompt(scene.description) 
+        handleUserChoice(answer)
+    } else {
+        alert(scene.description)
+    }
+    
 }
 
 function handleUserChoice(answer) {
     console.log(answer)
 
     const scene = scenes[currentScene];
-
-    if (!scene.choices) {
-        alert('Slut')
-        return;
-    }
 
     if(answer === scene.choices[0]) { 
         currentScene = scene.nextScene [0]  
