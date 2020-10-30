@@ -2,7 +2,7 @@
 let currentScene = 0
 const scenes = [
     {   //Scene 0
-        description: "Det är en grå och trist måndag morgon, matlådan är packad och klar. Det är dags att åka till jobbet.Har du nycklarna till ytterdörren?",
+        description: "Det är en grå och trist måndag morgon, matlådan är packad och klar. Det är dags att åka till jobbet. Har du nycklarna till ytterdörren?",
         choices:["Ja", "Nej"], 
         nextScene: [1, 7]  
     }, 
@@ -12,25 +12,22 @@ const scenes = [
         nextScene: [2, 8] 
     }, 
     {   //Scene 2
-        description: " Toppen, hoppa in i bilen så kör vi! Du inser att det behövs tankas. Vill du åka till St1 eller Circle K?",
+        description: " Toppen, hoppa in i bilen så kör vi! Det behövs tankas. Vill du åka till St1 eller Circle K?",
         choices: ["St1", "Circle K" ], 
         nextScene: [3, 3,]
     }, 
-
     {   //Scene 3
         description: "Bilen är tankad och klar. Nu raka vägen till jobbet. Du parkerar bilen och kollar upp mot kontoret. Går du in eller åker du hem till sängen igen? ",
         choices: ["Går in", "Åker hem"], 
         nextScene: [4, 5]
     }, 
-    
     { //Scene 4
         description: "Du är nu på jobbet. Vill du dricka kaffe eller te? ",
         choices: ["Kaffe", "Te"], 
         nextScene: [6, 6]
     }, 
-
     { //Scene 5
-        description: "Skönt att vara hemma. Sätt på tvn och njut!",
+        description: "Skönt att vara hemma igen. Sätt på tvn och njut!",
         choices: [],
         nextScene: []
     }, 
@@ -40,22 +37,19 @@ const scenes = [
         nextScene: [5, 9]  
     },
     { //Scene 7
-        description: "Kolla i lådan. Ok?",
+        description: "Kolla i lådan.",
         choices: [],
         nextScene: [1] 
-    
     }, 
     { //Scene 8
-        description: "Dörren måste vara låst, annars kan någon gå in. Ok?",
+        description: "Dörren måste vara låst, annars kan någon gå in.",
         choices: [],
         nextScene: [1] 
-    
     }, 
     { //Scene 9
-        description: "Du måste åka hem nångång. Ok?",
+        description: "Du måste åka hem nångång.",
         choices: [],
         nextScene: [5] 
-    
     }, 
 ]; 
 
@@ -65,7 +59,6 @@ window.onload = presentScene;
 //Define the actions for our application 
 function presentScene() {
     const scene = scenes[currentScene];
-
     
     if (scene.nextScene.length === 1) {
         alert(scene.description)
@@ -77,12 +70,10 @@ function presentScene() {
     } else {
         alert(scene.description)
     }
-    
 }
 
 function handleUserChoice(answer) {
     console.log(answer)
-
     const scene = scenes[currentScene];
 
     if(answer === scene.choices[0]) { 
@@ -92,7 +83,6 @@ function handleUserChoice(answer) {
     if(answer === scene.choices[1]) {
         currentScene = scene.nextScene [1] 
     } 
-
     presentScene(); 
 }
 
