@@ -5,5 +5,5 @@ Av: Malin Österberg
 Det här är en berättelse om en helt vanlig måndag. Hur ser en vanlig måndag ut egentligen? 
 Jag har valt att använda prompt och alert för att göra berättelsen mer levande. 
 
-Github Page: https://msmalinosterberg.github.io/lab01/ 
+[Demo](https://msmalinosterberg.github.io/lab01/) 
 
