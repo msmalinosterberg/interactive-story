@@ -1,9 +1,7 @@
 # Laboration 1 - en textbaserad interaktiv upplevelse
 
-Titel: Vägen till jobbet 
-Av: Malin Österberg 
-Det här är en berättelse om en helt vanlig måndag. Hur ser en vanlig måndag ut egentligen? 
-Jag har valt att använda prompt och alert för att göra berättelsen mer levande. 
+Uppgift: Skapa en interaktiv berättelse med hjälp av prompt och alert. 
+Det här var den första uppgiften i JavaScript kursen. 
 
 [Demo](https://msmalinosterberg.github.io/lab01/) 
 
